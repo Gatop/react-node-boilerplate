@@ -11,3 +11,13 @@ services:
       - /usr/app/node_modules
     ports:
       - "3000:3000"
+  server:
+    container_name: repo-studio_server
+    build:
+      context: ./server/
+      dockerfile: Dockerfile
+    volumes:
+      - ./server/:/usr/app
+      - /usr/app/node_modules
+    ports:
+      - "4000:4000"
