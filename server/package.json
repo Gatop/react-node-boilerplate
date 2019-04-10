@@ -1,0 +1,14 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "Server for repo-studio",
+  "main": "server.js",
+  "scripts": {
+    "start": "node src/server.js"
+  },
+  "author": "Jaime Gomez",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
