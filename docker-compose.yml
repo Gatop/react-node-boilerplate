@@ -1,0 +1,13 @@
+version: '2'
+
+services:
+  client:
+    container_name: repo-studio_client
+    build:
+      context: ./client/
+      dockerfile: Dockerfile
+    volumes:
+      - ./client/:/usr/app
+      - /usr/app/node_modules
+    ports:
+      - "3000:3000"
