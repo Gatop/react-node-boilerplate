@@ -8,9 +8,9 @@ app.all('/*', function(req, res, next) {
 });
 
 app.get('/', function (req, res) {
-  res.send('Hello World!');
+  res.send('Hello World! from Docker');
 });
 
 app.listen(4000, function () {
-  console.log('Example app listening on port 3500!');
+  console.log('Example app listening on port 4000!');
 });

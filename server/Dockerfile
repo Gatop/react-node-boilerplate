@@ -11,4 +11,5 @@ RUN npm install -qy
 COPY ./ ./
 
 # start app
-CMD ["npm", "start"]
+CMD ["npm", "run", "dev"]
+#CMD ["npm", "start"]
