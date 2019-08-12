@@ -18,3 +18,7 @@ docker-compose up -d --build
           -p 3000:3000 \
           --rm \
           repo-studio_client`
+
+# Upgrading react to latest version
+npm install --save react@latest
+npm install --save react-scripts@latest
