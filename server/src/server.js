@@ -8,7 +8,7 @@ app.all('/*', function(req, res, next) {
 });
 
 app.get('/', function (req, res) {
-  res.send('Hello World! from Docker');
+  res.send('Hello World! from Docker, and Real Time');
 });
 
 app.listen(4000, function () {
