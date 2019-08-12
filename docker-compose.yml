@@ -2,7 +2,7 @@ version: '2'
 
 services:
   client:
-    container_name: repo-studio_client
+    container_name: react-node-boilerplate_client
     build:
       context: ./client/
       dockerfile: Dockerfile
@@ -12,7 +12,7 @@ services:
     ports:
       - "3000:3000"
   server:
-    container_name: repo-studio_server
+    container_name: react-node-boilerplate_server
     build:
       context: ./server/
       dockerfile: Dockerfile

@@ -1,4 +1,4 @@
-# React-Node Boilerplate by Jega
+# React-Node boilerplate by Jega
 Tool used to store all useful knowledge about programing.
 
 # Start docker-compose:
@@ -11,13 +11,13 @@ docker-compose up -d --build
 
 # Test client docker file
 
-  - Build: `docker build -t repo-studio_client .`
+  - Build: `docker build -t react-node-boilerplate_client .`
   - Run: `docker run -it \
           -v ${PWD}:/usr/app \
           -v /usr/app/node_modules \
           -p 3000:3000 \
           --rm \
-          repo-studio_client`
+          react-node-boilerplate_client`
 
 # Upgrading react to latest version
 npm install --save react@latest

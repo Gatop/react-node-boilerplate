@@ -1,7 +1,7 @@
 {
   "name": "server",
   "version": "1.0.0",
-  "description": "Server for repo-studio",
+  "description": "Server for react-node-boilerplate",
   "main": "server.js",
   "scripts": {
     "start": "node src/server.js",
