@@ -20,5 +20,8 @@ docker-compose up -d --build
           react-node-boilerplate_client`
 
 # Upgrading react to latest version
+```
 npm install --save react@latest
+npm install --save react-dom@latest
 npm install --save react-scripts@latest
+```
