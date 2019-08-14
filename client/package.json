@@ -25,6 +25,7 @@
   "author": "Jaime Gomez",
   "license": "ISC",
   "devDependencies": {
-    "react-test-renderer": "^16.9.0"
+    "@testing-library/jest-dom": "^4.0.0",
+    "@testing-library/react": "^9.1.1"
   }
 }

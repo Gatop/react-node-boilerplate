@@ -25,3 +25,9 @@ npm install --save react@latest
 npm install --save react-dom@latest
 npm install --save react-scripts@latest
 ```
+
+# To launch unit testing
+> Liraries:
+> * https://github.com/testing-library/jest-dom
+> * https://github.com/testing-library/react-testing-library
+> ``` Test: `npm test` ```
