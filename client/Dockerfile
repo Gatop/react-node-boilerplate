@@ -1,6 +1,6 @@
 # Setup and build the client
 
-FROM node:9.4.0-alpine
+FROM node:lts-alpine
 
 WORKDIR /usr/app
 

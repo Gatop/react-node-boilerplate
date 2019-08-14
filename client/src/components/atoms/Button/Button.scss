@@ -1,0 +1,9 @@
+@import '../../../styles/colors.scss';
+
+.a-button {
+  background-color: green;
+
+  &--primary {
+    color: $white;
+  }
+}
