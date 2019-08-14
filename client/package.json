@@ -23,5 +23,8 @@
     "not op_mini all"
   ],
   "author": "Jaime Gomez",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "react-test-renderer": "^16.9.0"
+  }
 }
