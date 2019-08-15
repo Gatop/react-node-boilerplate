@@ -1,12 +1,13 @@
 # Setup and build the client
 
-FROM node:lts-alpine
+FROM node:12-alpine
 
 WORKDIR /usr/app
 
 # install and cache app dependencies
 COPY package*.json ./
 RUN npm install -qy
+RUN npm install node-sass@latest
 
 COPY ./ ./
 
