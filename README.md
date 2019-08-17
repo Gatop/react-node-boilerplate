@@ -2,7 +2,8 @@
 Tool used to store all useful knowledge about programing.
 
 # Start docker-compose:
-docker-compose up -d --build
+* ```docker-compose up -d --build```
+* ```sudo docker run -it react-node-boilerplate_client /bin/sh```
 
 > Please increase http request amount of time, if there is a message regarding "Read timed out"
 > * export DOCKER_CLIENT_TIMEOUT=120
@@ -30,4 +31,4 @@ npm install --save react-scripts@latest
 > Liraries:
 > * https://github.com/testing-library/jest-dom
 > * https://github.com/testing-library/react-testing-library
-> ``` Test: `npm test` ```
+> * ``` Test: `npm test` ```
