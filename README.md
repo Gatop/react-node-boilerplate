@@ -32,3 +32,7 @@ npm install --save react-scripts@latest
 > * https://github.com/testing-library/jest-dom
 > * https://github.com/testing-library/react-testing-library
 > * ``` Test: `npm test` ```
+
+# Sass linters
+> * https://github.com/sasstools/sass-lint
+> - Execute task: `./node_modules/.bin/sass-lint 'src/**/*.scss' -v -q`
