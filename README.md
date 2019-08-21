@@ -35,4 +35,5 @@ npm install --save react-scripts@latest
 
 # Sass linters
 > * https://github.com/sasstools/sass-lint
-> - Execute task: `./node_modules/.bin/sass-lint 'src/**/*.scss' -v -q`
+> - Native task: ```./node_modules/.bin/sass-lint 'src/**/*.scss' -v -q```
+> - Gulp task: ```gulp sass-lint``` or ```gulp watch```
