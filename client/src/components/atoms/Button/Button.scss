@@ -1,9 +1,10 @@
 @import '../../../styles/colors.scss';
 
 .a-button {
-  background-color: green;
+  background-color: $test-color;
 
   &--primary {
+    display: block;
     color: $white;
   }
 }
