@@ -40,3 +40,4 @@ npm install --save react-scripts@latest
 
 # ES linters
 > - Native task: ```npx eslint src --ext .js```
+> - Gulp task: ```gulp eslint``` or ```gulp watch```
