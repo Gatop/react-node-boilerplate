@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from '@testing-library/react'
 import '@testing-library/jest-dom/extend-expect'
-import Button from '../../components/atoms/Button/Button';
+import Button from './Button';
 
 describe('Button component', () => {
   test('it shows the expected text when button is rendered', () => {
