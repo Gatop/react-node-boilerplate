@@ -28,6 +28,9 @@
   "devDependencies": {
     "@testing-library/jest-dom": "^4.0.0",
     "@testing-library/react": "^9.1.1",
+    "babel-eslint": "^10.0.2",
+    "eslint": "^6.2.1",
+    "eslint-plugin-react": "^7.14.3",
     "gulp": "^4.0.2",
     "gulp-livereload": "^4.0.1",
     "gulp-sass-lint": "^1.4.0"

@@ -1,15 +1,14 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 import Button from './components/atoms/Button/Button';
 
-
-class App extends Component {
+class App extends React.Component {
   render() {
     return (
       <div className="App">
-          <Button
-              buttonText="This is a button"
-              buttonClasses="a-button--primary"/>
+        <Button
+          buttonText="This is a button"
+          buttonClasses="a-button--primary"/>
       </div>
     );
   }
