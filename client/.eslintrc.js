@@ -48,7 +48,7 @@ module.exports = {
         "react/jsx-indent": [ 2, 2 ],
         "react/prop-types": [ 1 ],
         "react/no-array-index-key": [ 1 ],
-        "class-methods-use-this": [ 1 ],
+        "class-methods-use-this": [ 1, { "exceptMethods": ["render"] } ],
         "no-undef": [ 1 ],
         "no-case-declarations": [ 1 ],
         "no-return-assign": [ 1 ],

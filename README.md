@@ -36,8 +36,13 @@ npm install --save react-scripts@latest
 # Sass linters
 > * https://github.com/sasstools/sass-lint
 > - Native task: ```./node_modules/.bin/sass-lint 'src/**/*.scss' -v -q```
+> - npx task: ```npx sass-lint 'src/**/*.scss' -v -q```
+> - npm script: ```npm run lintjs```
 > - Gulp task: ```gulp sass-lint``` or ```gulp watch```
 
 # ES linters
-> - Native task: ```npx eslint src --ext .js```
+> * https://github.com/eslint/eslint
+> - Native task: ```./node_modules/.bin/eslint src --ext .js```
+> - npx task: ```npx eslint src --ext .js```
+> - npm script: ```npm run lintjs```
 > - Gulp task: ```gulp eslint``` or ```gulp watch```

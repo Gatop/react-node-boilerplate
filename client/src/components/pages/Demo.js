@@ -2,10 +2,10 @@ import React from 'react';
 
 import Button from '../atoms/Button/Button';
 
-class Home extends React.Component {
+class Demo extends React.Component {
   render() {
     return (
-      <div className="Home">
+      <div className="Demo">
         <Button
           buttonText="This is a button"
           buttonClasses="a-button--primary"/>
@@ -14,4 +14,4 @@ class Home extends React.Component {
   }
 }
 
-export default Home;
+export default Demo;
