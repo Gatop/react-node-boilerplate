@@ -46,3 +46,9 @@ npm install --save react-scripts@latest
 > - npx task: ```npx eslint src --ext .js```
 > - npm script: ```npm run lintjs```
 > - Gulp task: ```gulp eslint``` or ```gulp watch```
+
+# Libraries
+> * gridlex: https://gridlex.devlint.fr/
+
+# References
+> * Sass Datatypes: https://www.tutorialsteacher.com/sass/sass-data-types

@@ -1,0 +1,44 @@
+
+// ----------------------------------------------------
+// This file contains all application-wide Sass mixins.
+// ----------------------------------------------------
+
+/// Aspect ratio wrapper
+/// @author Chris Coyier
+/// @param {integer} $width - width value for the box (16 , 9) 16 is the width
+/// @param {integer} $height - height value for the box (16 , 9) 9 is the height
+/// @link https://css-tricks.com/snippets/sass/maintain-aspect-ratio-mixin/
+@mixin aspect-ratio($width, $height) {
+  position: relative;
+
+  &::before {
+    display: block;
+    width: 100%;
+    padding-top: ($height / $width) * 100%;
+    content: ' ';
+  }
+
+  > .aspect-ratio-content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+/// Reset element's margins and paddings
+/// @author Jaime Gomez
+@mixin reset-spaces {
+  margin: 0;
+  padding: 0;
+}
+
+/// Aspect ratio wrapper
+/// @author Jaime Gomez
+/// @param {color} $color - color to be use as default for an svg
+@mixin fill-svg($color) {
+  * {
+    fill: $color !important;
+  }
+}

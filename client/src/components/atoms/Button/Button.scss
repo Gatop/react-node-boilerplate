@@ -1,10 +1,11 @@
-@import '../../../styles/colors.scss';
+@import '../../../stylesheets/main';
 
 .a-button {
-  background-color: $test-color;
+  background-color: $color-orange;
+  font-family: $font-italic;
 
   &--primary {
     display: block;
-    color: $white;
+    color: $color-white;
   }
 }

@@ -1,0 +1,13 @@
+/// Helper for getting a specific @media-query with a limit value
+/// @author Jaime Gomez
+/// @access public
+/// @param {string} $limit - key tag('min' or 'max')
+/// @param {number} $value - pixels value to apply styles in the @media-query
+/// @example media-width('max', 768px)
+@function media-width($limit, $value) {
+  @if $limit == 'min' {
+    @return 'min-width: ' + $value;
+  } @else if $limit == 'max' {
+    @return 'max-width: ' + ($value - 1px);
+  }
+}
