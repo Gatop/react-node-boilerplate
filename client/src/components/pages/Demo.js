@@ -38,7 +38,7 @@ class Demo extends React.Component {
           </div>
 
           <h4>Aspect ratio</h4>
-          <div className='grid-2-middle'>
+          <div className='grid-2_sm-1-middle'>
             <div className='col'>
               <AspectRatio ratio={ 1 / 1 }>
               </AspectRatio>

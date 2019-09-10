@@ -35,7 +35,13 @@ a {
 
 [class*='hidden-'] {
   &[class*='-xs'] {
-    @media only screen and (media-width('max', $screen-md)) {
+    @media only screen and (media-width('max', $screen-sm)) {
+      display: none !important;
+    }
+  }
+
+  &[class*='-sm'] {
+    @media only screen and (media-width('min', $screen-sm)) and (media-width('max', $screen-md)) {
       display: none !important;
     }
   }
