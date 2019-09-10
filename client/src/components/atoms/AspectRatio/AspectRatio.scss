@@ -1,0 +1,18 @@
+@import '../../../stylesheets/main';
+
+.a-aspect-ratio {
+  &__outer-wrapper {
+    position: relative;
+    height: 0;
+    background-color: $color-black;
+    overflow: hidden;
+  }
+
+  &__inner-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+}

@@ -3,30 +3,7 @@
 // This file contains all application-wide Sass mixins.
 // ----------------------------------------------------
 
-/// Aspect ratio wrapper
-/// @author Chris Coyier
-/// @param {integer} $width - width value for the box (16 , 9) 16 is the width
-/// @param {integer} $height - height value for the box (16 , 9) 9 is the height
-/// @link https://css-tricks.com/snippets/sass/maintain-aspect-ratio-mixin/
-@mixin aspect-ratio($width, $height) {
-  position: relative;
-
-  &::before {
-    display: block;
-    width: 100%;
-    padding-top: ($height / $width) * 100%;
-    content: ' ';
-  }
-
-  > .aspect-ratio-content {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-  }
-}
-
+/// @name reset-spaces
 /// Reset element's margins and paddings
 /// @author Jaime Gomez
 @mixin reset-spaces {
@@ -35,10 +12,130 @@
 }
 
 /// Aspect ratio wrapper
-/// @author Jaime Gomez
+/// @name fill-svg
 /// @param {color} $color - color to be use as default for an svg
+/// @author Jaime Gomez
 @mixin fill-svg($color) {
   * {
     fill: $color !important;
   }
+}
+
+/// @name titles-styles
+/// @argument {string} $tag
+///   Is the tag HTML title, is a string
+///
+/// @example scss
+///   .element {
+///     @include titles-styles('h2');
+///   }
+///
+/// @author Jaime Gomez
+@mixin titles-styles($tag) {
+  $font: '';
+  $size: 0;
+  $size-up: 0;
+  $line-height: 0;
+  $line-height-up: 0;
+  $color: $color-black;
+
+  @if $tag == 'h1' {
+    $font: $font-bold;
+    $size: 40px;
+    $size-up: 44px;
+    $line-height: 52px;
+    $line-height-up: 56px;
+  } @else if $tag == 'h2' {
+    $font: $font-bold;
+    $size: 32px;
+    $size-up: 36px;
+    $line-height: 40px;
+    $line-height-up: 48px;
+  } @else if $tag == 'h3' {
+    $font: $font-bold;
+    $size: 28px;
+    $size-up: 32px;
+    $line-height: 36px;
+    $line-height-up: 40px;
+  } @else if $tag == 'h4' {
+    $font: $font-bold;
+    $size: 24px;
+    $size-up: 28px;
+    $line-height: 32px;
+    $line-height-up: 36px;
+  } @else if $tag == 'h5' {
+    $font: $font-bold;
+    $size: 20px;
+    $size-up: 24px;
+    $line-height: 28px;
+    $line-height-up: 32px;
+  } @else if $tag == 'h6' {
+    $font: $font-bold;
+    $size: 18px;
+    $size-up: 22px;
+    $line-height: 24px;
+    $line-height-up: 28px;
+  }
+
+  margin: 0;
+  color: $color;
+  font-family: $font;
+  font-size: $size;
+  line-height: $line-height;
+
+  @if $size-up != 0 {
+    @media only screen and (media-width('min', $screen-md)) {
+      font-size: $size-up;
+    }
+  }
+
+  @if $line-height-up != 0 {
+    @media only screen and (media-width('min', $screen-md)) {
+      line-height: $line-height-up;
+    }
+  }
+}
+
+/// @name paragraph-styles
+/// General styles for paragraphs
+/// @author Jaime Gomez
+@mixin paragraph-styles {
+  color: $color-black;
+  font-family: $font-regular;
+  font-size: 16px;
+  letter-spacing: 0.2px;
+  line-height: 24px;
+}
+
+/// @name caption-regular
+/// General styles for caption-regular
+/// @author Jaime Gomez
+@mixin caption-regular {
+  color: $color-black;
+  font-family: $font-regular;
+  font-size: 14px;
+  letter-spacing: 0.2px;
+  line-height: 20px;
+}
+
+/// @name caption-light
+/// General styles for caption-light
+/// @author Jaime Gomez
+@mixin caption-light {
+  color: $color-black;
+  font-family: $font-light;
+  font-size: 13px;
+  letter-spacing: 0.2px;
+  line-height: 20px;
+}
+
+/// @name caption-italic
+/// General styles for caption-italic
+/// @author Jaime Gomez
+@mixin caption-italic {
+  color: $color-black;
+  font-family: $font-italic;
+  font-size: 13px;
+  letter-spacing: 0.3px;
+  line-height: 20px;
 }

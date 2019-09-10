@@ -1,0 +1,47 @@
+h1 {
+  @include titles-styles('h1');
+}
+
+h2 {
+  @include titles-styles('h2');
+}
+
+h3 {
+  @include titles-styles('h3');
+}
+
+h4 {
+  @include titles-styles('h4');
+}
+
+h5 {
+  @include titles-styles('h5');
+}
+
+h6 {
+  @include titles-styles('h6');
+}
+
+p {
+  @include paragraph-styles;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.caption-regular {
+  @include caption-regular;
+}
+
+.caption-light {
+  @include caption-light;
+}
+
+.caption-italic {
+  @include caption-italic;
+}
