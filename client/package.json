@@ -36,6 +36,7 @@
     "gulp": "^4.0.2",
     "gulp-eslint": "^6.0.0",
     "gulp-livereload": "^4.0.1",
-    "gulp-sass-lint": "^1.4.0"
+    "gulp-sass-lint": "^1.4.0",
+    "react-test-renderer": "^16.9.0"
   }
 }

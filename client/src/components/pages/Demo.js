@@ -3,10 +3,12 @@ import React from 'react';
 import Button from '../atoms/Button/Button';
 import AspectRatio from '../atoms/AspectRatio/AspectRatio';
 
+import './Demo.scss';
+
 class Demo extends React.Component {
   render() {
     return (
-      <div className='Demo'>
+      <div className='p-demo'>
         <div className='container'>
 
           <div className='grid-1'>
