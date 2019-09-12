@@ -6,28 +6,23 @@ class Button extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      buttonClasses: this.setCustomButtonClasses(this.props.buttonClasses),
-    };
-
+    this.setCustomButtonClasses = this.setCustomButtonClasses.bind(this);
   }
 
   // Set correct modifiers according button selector
   setCustomButtonClasses(classes) {
-    if (classes) {
-      const newButtonClasses = classes.reduce((acc, val) => {
-        return acc + ' a-button--' + val;
-      }, '');
-
-      return newButtonClasses;
-    } else {
+    if (!classes) {
       return '';
     }
+
+    return classes.map((eachClass) => ('a-button--' + eachClass)).join(' ');
   }
 
   render() {
+    const customClasses = this.setCustomButtonClasses(this.props.buttonClasses);
+
     return (
-      <button className={ 'a-button ' + (this.state.buttonClasses) }>
+      <button className={ 'a-button ' + customClasses }>
         {this.props.buttonText}
       </button>
     );

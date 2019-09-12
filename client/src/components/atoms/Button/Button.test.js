@@ -29,7 +29,7 @@ describe('Button component', () => {
   test('it returns modifiers with correct format', () => {
     const buttonText = 'Test Message 3';
     const buttonClasses = [ 'secondary', 'green' ];
-    const formattedClasses  = ' a-button--secondary a-button--green';
+    const formattedClasses  = 'a-button--secondary a-button--green';
     const button = create(<Button buttonText={ buttonText } />);
     const instance = button.getInstance();
     const result = instance.setCustomButtonClasses(buttonClasses);
