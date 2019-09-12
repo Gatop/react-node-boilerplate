@@ -1,11 +1,17 @@
 @import '../../../stylesheets/main';
 
 .a-button {
+  padding: 5px;
   background-color: $color-orange;
   font-family: $font-italic;
 
   &--primary {
-    display: block;
-    color: $color-white;
+    height: 50px;
+    font-family: $font-bold;
+  }
+
+  &--dark {
+    background-color: $color-white;
+    color: $color-orange;
   }
 }

@@ -31,7 +31,7 @@ class AspectRatio extends React.Component {
           </div>
         </div>
       </div>
-    )
+    );
   }
 }
 

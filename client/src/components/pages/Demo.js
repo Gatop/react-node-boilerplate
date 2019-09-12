@@ -34,7 +34,7 @@ class Demo extends React.Component {
             <div className='col'>
               <Button
                 buttonText='This is a button primary'
-                buttonClasses='a-button--primary'>
+                buttonClasses={ [ 'primary', 'dark' ] }>
               </Button>
             </div>
           </div>

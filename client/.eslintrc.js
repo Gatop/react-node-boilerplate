@@ -40,7 +40,7 @@ module.exports = {
         "no-multiple-empty-lines": [ 2, { "max": 1, "maxEOF": 0, "maxBOF": 0 } ],
         "quotes": [ 1, "single", "avoid-escape" ],
         "no-use-before-define": [ 2, { "functions": false } ],
-        "semi": [0, "never"],
+        "semi": ["error", "always", { "omitLastInOneLineBlock": true}],
         "prefer-const": 1,
         "react/prefer-es6-class": 0,
         "react/jsx-filename-extension": 0,
@@ -48,7 +48,7 @@ module.exports = {
         "react/jsx-indent": [ 2, 2 ],
         "react/prop-types": [ 1 ],
         "react/no-array-index-key": [ 1 ],
-        "class-methods-use-this": [ 1, { "exceptMethods": ["render"] } ],
+        "class-methods-use-this": [ 0, { "exceptMethods": ["render"] } ],
         "no-undef": [ 1 ],
         "no-case-declarations": [ 1 ],
         "no-return-assign": [ 1 ],
@@ -58,6 +58,7 @@ module.exports = {
         "no-underscore-dangle" : [0, "always"],
         "react/jsx-uses-react": "error",
         "react/jsx-uses-vars": "error",
-        "indent": ["error", 2]
+        "indent": ["error", 2],
+        "keyword-spacing": ["error", { "before": true }],
     }
 };
