@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Demo from './components/pages/Demo';
+import Demo from './components/pages/Demo/Demo';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(<Demo />, document.getElementById('root'));

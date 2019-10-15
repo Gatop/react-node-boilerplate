@@ -1,7 +1,7 @@
 import React from 'react';
 
-import Button from '../atoms/Button/Button';
-import AspectRatio from '../atoms/AspectRatio/AspectRatio';
+import Button from '../../atoms/Button/Button';
+import AspectRatio from '../../atoms/AspectRatio/AspectRatio';
 
 import './Demo.scss';
 
