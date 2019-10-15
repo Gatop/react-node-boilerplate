@@ -2,6 +2,7 @@ import React from 'react';
 
 import Button from '../../atoms/Button/Button';
 import AspectRatio from '../../atoms/AspectRatio/AspectRatio';
+import ButtonHook from '../../atoms/ButtonHook/ButtonHook';
 
 import './Demo.scss';
 
@@ -32,10 +33,10 @@ class Demo extends React.Component {
               </Button>
             </div>
             <div className='col'>
-              <Button
+              <ButtonHook
                 buttonText='This is a button primary'
-                buttonClasses={ [ 'primary', 'dark' ] }>
-              </Button>
+                buttonClasses={ [ 'primary', 'dark', 'hook' ] }>
+              </ButtonHook>
             </div>
           </div>
 
