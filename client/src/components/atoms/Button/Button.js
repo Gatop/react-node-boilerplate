@@ -2,15 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './Button.scss';
 
-class Button extends React.Component {
-  constructor(props) {
-    super(props);
+function Button(props) {
+  const customClasses = setCustomClasses(props.buttonClasses);
 
-    this.setCustomButtonClasses = this.setCustomButtonClasses.bind(this);
-  }
-
-  // Set correct modifiers according button selector
-  setCustomButtonClasses(classes) {
+  function setCustomClasses(classes) {
     if (!classes) {
       return '';
     }
@@ -18,15 +13,11 @@ class Button extends React.Component {
     return classes.map((eachClass) => ('a-button--' + eachClass)).join(' ');
   }
 
-  render() {
-    const customClasses = this.setCustomButtonClasses(this.props.buttonClasses);
-
-    return (
-      <button className={ 'a-button ' + customClasses }>
-        {this.props.buttonText}
-      </button>
-    );
-  }
+  return (
+    <button className={ 'a-button ' + customClasses }>
+      {props.buttonText}
+    </button>
+  );
 }
 
 // Properties
