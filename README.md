@@ -49,6 +49,7 @@ npm install --save react-scripts@latest
 
 # Libraries
 > * gridlex: https://gridlex.devlint.fr/
+> * whatwg-fetch: https://www.npmjs.com/package/whatwg-fetch
 
 # References
 > * Sass Datatypes: https://www.tutorialsteacher.com/sass/sass-data-types
