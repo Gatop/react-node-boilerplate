@@ -19,4 +19,20 @@ colorController.list = (req, res) => {
   res.json(colors);
 };
 
+/**
+ * GET ALL colors.
+ *
+ * @param object $req
+ *   The request to be processed.
+ * @param object $res
+ *   The response.
+ */
+colorController.randomColor = (req, res) => {
+  var randomCode = Math.floor(Math.random()*16777215).toString(16);
+
+  let newColor = new Color('random', '#'+randomCode);
+
+  res.json(newColor);
+};
+
 module.exports = colorController;

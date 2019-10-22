@@ -34,7 +34,8 @@ class Demo extends React.Component {
             <div className='col'>
               <Button
                 buttonText='This is a button primary'
-                buttonClasses={ [ 'primary', 'dark', 'hook' ] }>
+                buttonClasses={ [ 'primary', 'dark', 'hook' ] }
+                buttonAction='http://localhost:4000/random-color'>
               </Button>
             </div>
           </div>
