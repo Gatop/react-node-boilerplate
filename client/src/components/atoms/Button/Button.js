@@ -7,7 +7,7 @@ const { useState } = React;
 
 function Button(props) {
   const customClasses = setCustomClasses(props.buttonClasses);
-  const [ data, setData ] = useState('initial');
+  const [ color, setColor ] = useState('initial');
 
   function setCustomClasses(classes) {
     if (!classes) {
@@ -21,13 +21,13 @@ function Button(props) {
     if (props.buttonAction) {
       HTTP.get(props.buttonAction)
         .then((response) => {
-          setData(response);
+          setColor(response);
         });
     }
   }
 
   return (
-    <button className={ 'a-button ' + customClasses } onClick={ getNewColor } style={ { backgroundColor: data.code } }>
+    <button className={ 'a-button ' + customClasses } onClick={ getNewColor } style={ { backgroundColor: color.code } }>
       {props.buttonText}
     </button>
   );
