@@ -7,7 +7,7 @@ const { useState } = React;
 
 function Button(props) {
   const customClasses = setCustomClasses(props.buttonClasses);
-  const [ color, setColor ] = useState('initial');
+  const [ color, setColor ] = useState({});
 
   function setCustomClasses(classes) {
     if (!classes) {
