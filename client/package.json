@@ -1,0 +1,43 @@
+{
+  "name": "client",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "node-sass": "^4.12.0",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-scripts": "^3.1.0",
+    "whatwg-fetch": "^3.0.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "lintjs": "./node_modules/.bin/eslint src --ext .js",
+    "lintsass": "./node_modules/.bin/sass-lint 'src/**/*.scss' -v -q"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "author": "Jaime Gomez",
+  "license": "ISC",
+  "devDependencies": {
+    "@testing-library/jest-dom": "^4.0.0",
+    "@testing-library/react": "^9.1.1",
+    "babel-eslint": "^10.0.2",
+    "eslint": "^6.2.1",
+    "eslint-plugin-react": "^7.14.3",
+    "gulp": "^4.0.2",
+    "gulp-eslint": "^6.0.0",
+    "gulp-livereload": "^4.0.1",
+    "gulp-sass-lint": "^1.4.0",
+    "react-test-renderer": "^16.9.0"
+  }
+}

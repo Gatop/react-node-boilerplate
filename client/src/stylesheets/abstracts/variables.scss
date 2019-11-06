@@ -1,0 +1,23 @@
+// --------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// --------------------------------------------------------
+
+// Breakpoints map
+$screen-xs: 576px;
+$screen-sm: 768px;
+$screen-md: 1024px;
+$screen-lg: 1280px;
+
+$max-width-container: 1200px;
+
+// Color palette
+$color-white: #FFFFFF;
+$color-black: #000000;
+$color-orange: #FFA500;
+$color-aqua: #7FFFD4;
+
+// Font Family
+$font-bold: 'AlegreyaBold';
+$font-italic: 'AlegreyaItalic';
+$font-light: 'AlegreyaLight';
+$font-regular: 'AlegreyaRegular';
