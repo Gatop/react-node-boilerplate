@@ -1,68 +1,142 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# react-node-boilerplate_client
+This is an APP built with **ReactJs**. This project was initialized with [Create React App] by facebook (https://github.com/facebook/create-react-app)
 
 ## Available Scripts
 
-In the project directory, you can run:
+### Builds for production
 
-### `npm start`
-
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
+``` Build: `npm run build` ```
 
 Builds the app for production to the `build` folder.<br>
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+### Running development mode
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+``` Run: `npm start` ```
 
-### `npm run eject`
+Runs the app in the development mode.<br>
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Unit testing
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Launches the test runner in the interactive watch mode.<br>
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+``` Test: `npm test` ```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+> Libraries:
+> * https://github.com/testing-library/jest-dom
+> * https://github.com/testing-library/react-testing-library
 
-## Learn More
+### Sass linters
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+> - Native task: ```./node_modules/.bin/sass-lint 'src/**/*.scss' -v -q```
+> - npx task: ```npx sass-lint 'src/**/*.scss' -v -q```
+> - npm script: ```npm run lintjs```
+> - Gulp task: ```gulp sass-lint``` or ```gulp watch```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+> Libraries:
+> * https://github.com/sasstools/sass-lint
 
-### Code Splitting
+### ES linters
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+> - Native task: ```./node_modules/.bin/eslint src --ext .js```
+> - npx task: ```npx eslint src --ext .js```
+> - npm script: ```npm run lintjs```
+> - Gulp task: ```gulp eslint``` or ```gulp watch```
 
-### Analyzing the Bundle Size
+> Libraries:
+> * https://github.com/eslint/eslint
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
 
-### Making a Progressive Web App
+## Upgrading react to latest version
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+If an upgrade for react is required, you can launch the following commands. For more info please visit (https://create-react-app.dev/docs/updating-to-new-releases)
 
-### Advanced Configuration
+```
+npm install --save react@latest
+npm install --save react-dom@latest
+npm install --save react-scripts@latest
+```
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+## Project Description
 
-### Deployment
+### Project Structure
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+```
+client
+├── README.md
+├── node_modules
+├── package.json
+├── .gitignore
+├── public
+└── src
+    ├── assets
+    │   ├── fonts
+    │   └── images
+    ├── services
+    │   └── http.js
+    ├── components
+    │   ├── atoms
+    │   │   ├── AspectRatio
+    │   │   │   ├──AspectRatio.js
+    │   │   │   ├──AspectRatio.scss
+    │   │   │   └──AspectRatio.test.js
+    │   │   ├── Button
+    │   │   │   ├──Button.js
+    │   │   │   ├──Button.scss
+    │   │   │   └──Button.test.js
+    │   └── pages
+    │       └── Demo
+    │           ├──Demo.js
+    │           ├──Demo.scss
+    │           └──Demo.test.js
+    ├── stylesheets
+    │   ├── abstracts
+    │   │   ├── functions.scss
+    │   │   ├── mixins.scss
+    │   │   └── mixins.scss
+    │   ├── base
+    │   │   ├── base.scss
+    │   │   ├── fonts.scss
+    │   │   └── typography.scss
+    │   ├── vendors
+    │   │   └── gridlex.scss
+    │   └── Main.scss
+    ├── index.js
+    └── registerServiceWorker.js
+```
+### Component's Segregation
 
-### `npm run build` fails to minify
+Atomic design is the front approach to organize components. From this statement, a component should be located in the following folders:
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+```
+client
+└── src
+    ├── components
+        ├── atoms
+        ├── molecules
+        ├── organisms
+        ├── templates
+        └── pages
+```
+To learn more about atomic please visit -> (http://atomicdesign.bradfrost.com/table-of-contents/)
+
+### Class convention
+
+BEM is the naming convention suggested for this project.
+
+```
+block__element__modifier
+```
+
+Also in combination with atomic, each class should has a prefix that would denote which type of element we are declaring.
+
+Take a look for more info -> https://www.lullabot.com/articles/bem-atomic-design-a-css-architecture-worth-loving
+
+### Used Libraries
+> * gridlex: https://gridlex.devlint.fr/
+> * whatwg-fetch: https://www.npmjs.com/package/whatwg-fetch
+
+### References
+> * Sass Datatypes: https://www.tutorialsteacher.com/sass/sass-data-types

@@ -1,16 +1,31 @@
 # React-Node boilerplate by Jega
-Tool used to store all useful knowledge about programing.
+This project was created to allow an esay starting point to code a web application based on a Front-End Application(React) and a rest API(Express).
 
-# Start docker-compose:
-* ```docker-compose up -d --build```
-* ```sudo docker run -it react-node-boilerplate_client /bin/sh```
+# Client(React):
+This is an APP built with **ReactJs**. This project was initialized with [Create React App] by facebook (https://github.com/facebook/create-react-app)
 
-> Please increase http request amount of time, if there is a message regarding "Read timed out"
-> * export DOCKER_CLIENT_TIMEOUT=120
-> * export COMPOSE_HTTP_TIMEOUT=12
+If you want to know how was build please take a look into readme file from client folder.
 
+# Server(Express):
+This is an API built with **NodeJs** using **Express Framework**.
 
-# Test client docker file
+If you want to know how was build please take a look into readme file from server folder.
+
+# Running on the same environment:
+Docker and docker-compose were used to create a running environment for both projects.
+
+### Run both projects:
+```sh
+# Using docker-compose
+docker-compose up -d --build
+```
+
+### Run client:
+```sh
+sudo docker run -it react-node-boilerplate_client /bin/sh
+```
+
+### Testing client docker file
 
   - Build: `docker build -t react-node-boilerplate_client .`
   - Run: `docker run -it \
@@ -20,36 +35,8 @@ Tool used to store all useful knowledge about programing.
           --rm \
           react-node-boilerplate_client`
 
-# Upgrading react to latest version
-```
-npm install --save react@latest
-npm install --save react-dom@latest
-npm install --save react-scripts@latest
-```
+# Troubleshooting for docker (ubuntu)
 
-# To launch unit testing
-> Liraries:
-> * https://github.com/testing-library/jest-dom
-> * https://github.com/testing-library/react-testing-library
-> * ``` Test: `npm test` ```
-
-# Sass linters
-> * https://github.com/sasstools/sass-lint
-> - Native task: ```./node_modules/.bin/sass-lint 'src/**/*.scss' -v -q```
-> - npx task: ```npx sass-lint 'src/**/*.scss' -v -q```
-> - npm script: ```npm run lintjs```
-> - Gulp task: ```gulp sass-lint``` or ```gulp watch```
-
-# ES linters
-> * https://github.com/eslint/eslint
-> - Native task: ```./node_modules/.bin/eslint src --ext .js```
-> - npx task: ```npx eslint src --ext .js```
-> - npm script: ```npm run lintjs```
-> - Gulp task: ```gulp eslint``` or ```gulp watch```
-
-# Libraries
-> * gridlex: https://gridlex.devlint.fr/
-> * whatwg-fetch: https://www.npmjs.com/package/whatwg-fetch
-
-# References
-> * Sass Datatypes: https://www.tutorialsteacher.com/sass/sass-data-types
+> Please increase http request amount of time, if there is a message regarding "Read timed out"
+> * export DOCKER_CLIENT_TIMEOUT=120
+> * export COMPOSE_HTTP_TIMEOUT=120
