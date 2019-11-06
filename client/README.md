@@ -113,7 +113,7 @@ Atomic design is the front approach to organize components. From this statement,
 ```
 client
 └── src
-    ├── components
+    └── components
         ├── atoms
         ├── molecules
         ├── organisms
